@@ -9,10 +9,10 @@
 marissa = User.create(firstName: "Marissa", lastName: "McHugh", username: "MMcHugh591")
 
 
-# hike1 = HikingList.create(trail: "Angels Landing", user_id: 1)
-#
-# packlist1 = PackingList.create(title: "Doggo is Coming", user_id: 1)
-#
-# packitem1 = PackingItem.create(name: "water bowl", packing_list_id: 1)
-# packitem2 = PackingItem.create(name: "towel", packing_list_id: 1)
-# packitem3 = PackingItem.create(name: "dog treats", packing_list_id: 1)
+hike1 = HikingList.create(trail: "Angels Landing", user_id: 1)
+
+packlist1 = PackingList.create(title: "Doggo is Coming", user_id: 1)
+
+packitem1 = PackingItem.create(name: "water bowl", packed: true, packing_list_id: 1)
+packitem2 = PackingItem.create(name: "towel", packed: false, packing_list_id: 1)
+packitem3 = PackingItem.create(name: "dog treats", packed: true, packing_list_id: 1)

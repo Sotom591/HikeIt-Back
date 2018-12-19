@@ -3,7 +3,7 @@ class CreatePackingItems < ActiveRecord::Migration[5.2]
     create_table :packing_items do |t|
       t.string :name
       t.boolean :packed
-      t.integer :packing_lists_id
+      t.integer :packing_list_id
       t.timestamps
     end
   end
