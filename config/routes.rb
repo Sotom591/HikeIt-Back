@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'packing_items/index'
-  get 'packing_list/index'
-  get 'hiking_list/index'
-  get 'users/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :users, only: [:index]
+
+  resources :packing_lists, only: [:index]
+  resources :packing_items, only: [:index]
+  resources :hiking_lists, only: [:index]
+
+
 end
