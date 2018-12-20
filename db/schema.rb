@@ -16,7 +16,22 @@ ActiveRecord::Schema.define(version: 2018_12_19_184851) do
   enable_extension "plpgsql"
 
   create_table "hiking_lists", force: :cascade do |t|
-    t.string "trail"
+    t.integer "API_id"
+    t.string "name"
+    t.string "summary"
+    t.string "difficulty"
+    t.integer "stars"
+    t.integer "starVotes"
+    t.string "location"
+    t.string "imgSmall"
+    t.string "imgMedium"
+    t.integer "length"
+    t.integer "ascent"
+    t.integer "descent"
+    t.integer "high"
+    t.integer "low"
+    t.integer "longitude"
+    t.integer "latitude"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
