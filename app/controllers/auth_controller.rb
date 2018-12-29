@@ -1,3 +1,4 @@
+require 'byebug'
 class AuthController < ApplicationController
 
   def create
@@ -7,6 +8,7 @@ class AuthController < ApplicationController
       render json: {
       message: "correct username & password",
       user_info: @user,
+      token: encode({user_id: @user.id}),
       error: false
     },
       status: :accepted
