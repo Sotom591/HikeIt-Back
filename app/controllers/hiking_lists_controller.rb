@@ -6,26 +6,22 @@ class HikingListsController < ApplicationController
   def show
     render json: HikingList.find(params[:id])
   end
-  
-  # private
-  #   def hiking_list_params
-  #     params.require(:hiking_list).permit(:trail)
-  #   end
-end
 
-# t.integer :API_id
-# t.string :name
-# t.string :summary
-# t.string :difficulty
-# t.integer :stars
-# t.integer :starVotes
-# t.string :location
-# t.string :imgSmall
-# t.string :imgMedium
-# t.integer :length
-# t.integer :ascent
-# t.integer :descent
-# t.integer :high
-# t.integer :low
-# t.integer :longitude
-# t.integer :latitude
+  def create
+    render json: HikingList.create(hiking_list_params)
+  end
+
+  def update
+    HikingList.find(params[:id]).update(hiking_list_params)
+    render json: HikingList.find(params[:id])
+  end
+
+  def destroy
+    render json: HikingList.find(params[:id]).destroy
+  end
+
+  private
+    def hiking_list_params
+      params.require(:hiking_list).permit(:API_id, :name, :summary, :difficulty, :stars, :starVotes, :location, :imgSmall, :imgMedium, :length, :ascent, :descent, :high, :low, :longitude, :latitude)
+    end
+end
