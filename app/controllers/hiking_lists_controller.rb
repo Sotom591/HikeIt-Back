@@ -3,8 +3,12 @@ class HikingListsController < ApplicationController
     render json: HikingList.all
   end
 
+  def show
+    render json: HikingList.find(params[:id])
+  end
+  
   # private
-  #   def user_params
+  #   def hiking_list_params
   #     params.require(:hiking_list).permit(:trail)
   #   end
 end
