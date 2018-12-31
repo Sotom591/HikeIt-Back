@@ -1,3 +1,4 @@
+require 'byebug'
 class PackingItemsController < ApplicationController
   def index
       render json: PackingItem.all
@@ -17,6 +18,7 @@ class PackingItemsController < ApplicationController
   end
 
   def destroy
+  
     render json: PackingItem.find(params[:id]).destroy
   end
 
