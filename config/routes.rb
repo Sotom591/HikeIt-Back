@@ -7,9 +7,9 @@ Rails.application.routes.draw do
         get '/profile', to: 'users#profile'
 
 
-      resources :packing_lists, only: [:index, :show]
-      resources :packing_items, only: [:index, :show]
-      resources :hiking_lists, only: [:index, :show]
+      resources :packing_lists, only: [:index, :show, :create, :update, :delete]
+      resources :packing_items, only: [:index, :show, :create, :update, :delete]
+      resources :hiking_lists, only: [:index, :show, :create, :update, :delete]
 
   #   end
   # end
